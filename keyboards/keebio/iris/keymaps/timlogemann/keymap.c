@@ -2,6 +2,11 @@
 
 #define _ KC_NO
 
+/* Combos */
+const uint16_t PROGMEM caplock_combo[] = {KC_LAPO, KC_LSFT, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {COMBO(caplock_combo, KC_CAPS)};
+
+
 // Initialize variable holding the binary
 // representation of active modifiers.
 uint8_t mod_state;
@@ -55,9 +60,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
             KC_TAB,   KC_Q,    KC_W,    KC_E,   KC_R,   KC_T,                               KC_Y,    KC_U,      KC_I,   KC_O,   KC_P,    KC_EQUAL,
         //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-            KC_LSFT, KC_A,    KC_S,    KC_D,   KC_F,   KC_G,                               KC_H,    KC_J,      KC_K,   KC_L,   KC_SCLN, KC_QUOT,
+            MT(MOD_LSFT, KC_TAB), KC_A,    KC_S,    KC_D,   KC_F,   KC_G,                               KC_H,    KC_J,      KC_K,   KC_L,   KC_SCLN, KC_QUOT,
         //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-            KC_LCTL, LT(4, KC_GRAVE),    KC_Z,   KC_X,   KC_C,   KC_V,       _,                _,    KC_B,    KC_N,      KC_M,   KC_COMM, KC_DOT,  KC_SLSH,
+            KC_LSFT, MT(MOD_LCTL, KC_GRAVE),  KC_Z,   KC_X,   KC_C,   KC_V,       _,                _,    KC_B,    KC_N,      KC_M,   KC_COMM, KC_DOT,  KC_SLSH,
         //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┤        ┤        ├        ┼────┬───┴───┬────┴───┬────┴────────┴────────┴────────┘
                                             KC_LAPO, KC_LGUI,     LT(3, KC_ENT), KC_SPC,   TT(1), LT(4,  KC_LBRC)
                                        //└────────┴────────┘    └────────┘        └────────┘    └───────┴────────┘

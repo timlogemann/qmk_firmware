@@ -27,6 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Select hand configuration */
 #define EE_HANDS
 
+// Combos
+#define COMBO_COUNT 1
+
 /** ================
  *    Save Space
  * ================ **/
