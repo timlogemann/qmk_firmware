@@ -23,7 +23,8 @@
         "editor.trimAutoWhitespace": false,
         "files.trimTrailingWhitespace": false
     },
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": false,
-    "editor.wordWrap": "off",
+    "python.formatting.provider": "yapf",
+    "[json]": {
+        "editor.formatOnSave": false
+    }
 }
