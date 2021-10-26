@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 150
 
 // apparantly I'm a fast typist
-#define PERMISSIVE_HOLD
+
 // Retro tapping should help with adding Layer Toggles
 // on hold of Enter or Space keys
 #define RETRO_TAPPING
