@@ -2,6 +2,12 @@
 
 #define _ KC_NO
 
+#define _QWERTY 0
+#define _MEDIA_ARROWS 1
+#define _MOUSE 2
+#define _BRACKETS 3
+#define _GAME 4
+
 /**
  *  Combos
  * */
@@ -33,7 +39,7 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Default
-    [0] = LAYOUT(
+    [_QWERTY] = LAYOUT(
         //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
             KC_ESC,  KC_1,    KC_2,    KC_3,   KC_4,   KC_5,                               KC_6,       KC_7,   KC_8,  KC_9,    KC_0,   KC_BSPC,
         //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -47,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        //└────────┴────────┘    └────────┘        └────────┘    └───────┴────────┘
         ),
     //
-    [1] = LAYOUT(
+    [_MEDIA_ARROWS] = LAYOUT(
         //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
             KC_GRAVE,   KC_F1,   KC_F2,    KC_F3,  KC_F4,     _,                                  _,       KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,      KC_RBRC,      KC_DEL,
         //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -60,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 LALT_T(KC_LBRC),    KC_TRNS,    KC_TRNS,            KC_TRNS,     KC_TRNS, RALT_T(KC_RBRC)
                                        //└────────┴────────┘    └────────┘        └────────┘    └───────┴────────┘
         ),
-    [2] = LAYOUT(
+    [_MOUSE] = LAYOUT(
         //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
             TO(0),     _,    KC_TRNS,    _,       _,     RGB_TOG,                               _,       _,       _,       _,       _,        _,
         //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -73,8 +79,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             _,      RGB_RMOD,     KC_TRNS,           KC_TRNS,    RGB_MOD,   _
                                        //└────────┴────────┘    └────────┘        └────────┘    └───────┴────────┘
         ),
-    [3] = LAYOUT(KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_LPRN,KC_LEFT_CURLY_BRACE,KC_LBRC,KC_LEFT_ANGLE_BRACKET,KC_TRNS,KC_TRNS,KC_RIGHT_ANGLE_BRACKET,KC_RBRC,KC_RIGHT_CURLY_BRACE,KC_RPRN,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS),
-    [4] = LAYOUT(
+    [_BRACKETS] = LAYOUT(KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_LPRN,KC_LEFT_CURLY_BRACE,KC_LBRC,KC_LEFT_ANGLE_BRACKET,KC_TRNS,KC_TRNS,KC_RIGHT_ANGLE_BRACKET,KC_RBRC,KC_RIGHT_CURLY_BRACE,KC_RPRN,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS),
+    [_GAME] = LAYOUT(
         //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
             KC_ESC,     _,      _,       _,       _,       _,                                  _,       _,      _,      KC_LBRC, KC_RBRC,   _,
         //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
