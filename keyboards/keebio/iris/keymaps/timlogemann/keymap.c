@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //├──────────┼────────┼────────┼────────┼────────┼────────┤                                   ├────────┼────────┼────────┼────────┼────────┼─────────┤
             KC_LSFT, KC_A,    KC_S,    KC_D,   KC_F,   KC_G,                                            KC_H,    KC_J,    KC_K,   KC_L,   LT(_MOUSE, KC_SCLN), KC_QUOT,
         //├─────────┼────────┼────────┼────────┼────────┼────────┼────────┐                ┌─────────┼────────┼────────┼────────┼────────┼────────┼─────────┤
-            KC_GRAVE, KC_LCTL,  KC_Z,   KC_X,   KC_C,   KC_V,       KC_HYPR,                 KC_MEH,  KC_B,    KC_N,    KC_M,   KC_COMM, MT(MOD_RCTL, KC_DOT),  KC_SLSH,
+            KC_GRAVE, LCTL_T(KC_LCTL),  KC_Z,   KC_X,   KC_C,   KC_V,       KC_HYPR,                 KC_MEH,  KC_B,    KC_N,    KC_M,   KC_COMM, MT(MOD_RCTL, KC_DOT),  KC_SLSH,
         //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┤        ┤                ├─────────┼────┬───┴────┬───┴────┬───┴────────┴────────┴─────────┘
                                             KC_LAPO, KC_LGUI,     LT(_BRACKETS, KC_ENT),     KC_SPC,       MO(_MEDIA_ARROWS),  KC_RAPC
         //                              └────────┴────────┘    └────────┘                └─────────┘    └────────┴────────┘
@@ -27,13 +27,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //
     [_MEDIA_ARROWS] = LAYOUT(
         //  ┌──-───────┬────────┬────────┬────────┬────────┬────────┐                                   ┌────────┬────────┬────────┬────────┬────────┬─────────┐
-           KC_GRAVE, KC_F1,   KC_F2,    KC_F3,  KC_F4,    KC_TRNS,                                      KC_TRNS,  KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,      KC_RBRC,      KC_DEL,
+           KC_GRAVE, KC_F1,   KC_F2,    KC_F3,  KC_F4,    CG_TOGG,                                      KC_TRNS,  KC_MEDIA_PREV_TRACK,    KC_MEDIA_PLAY_PAUSE,    KC_MEDIA_NEXT_TRACK,      KC_RBRC,      KC_DEL,
         // ├──────────┼────────┼────────┼────────┼────────┼────────┤                                   ├────────┼────────┼────────┼────────┼────────┼─────────┤
             KC_TRNS,  KC_F5,   KC_F6,  KC_F7,  KC_F8,   TT(_MOUSE),                                     KC_VOLU,    KC_PGUP,  KC_UP, KC_PGDN,   KC_TRNS,     KC_MINUS,
         //├──────────┼────────┼────────┼────────┼────────┼────────┤                                   ├────────┼────────┼────────┼────────┼────────┼─────────┤
             KC_TRNS,   KC_F9,   KC_F10, KC_F11, KC_F12,  KC_TRNS,                                       KC_VOLD,    KC_LEFT, KC_DOWN, KC_RGHT,    KC_TRNS,     KC_PAST,
         //├─────────┼────────┼────────┼────────┼────────┼────────┼────────┐                ┌─────────┼────────┼────────┼────────┼────────┼────────┼─────────┤
-            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,               KC_TRNS,  KC_MINUS, KC_HOME,   KC_TRNS, KC_END, KC_TRNS, KC_BSLASH,
+            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,               LT(_GAME),  KC_MINUS, KC_HOME,   KC_TRNS, KC_END, KC_TRNS, KC_BSLASH,
         //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┤        ┤                ├─────────┼────┬───┴────┬───┴────┬───┴────────┴────────┴─────────┘
                                 LALT_T(KC_LBRC),    KC_TRNS,    KC_TRNS,                    KC_TRNS,     KC_TRNS, RALT_T(KC_RBRC)
         //                              └────────┴────────┘    └────────┘                └─────────┘    └────────┴────────┘
@@ -66,15 +66,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_GAME] = LAYOUT(
         //  ┌──────────┬────────┬────────┬────────┬────────┬────────┐                                   ┌────────┬────────┬────────┬────────┬────────┬─────────┐
-            KC_ESC,    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,                                  KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC,  KC_TRNS,
+            KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,                                  KC_TRNS, KC_TRNS, KC_TRNS, KC_LBRC, KC_RBRC,  KC_TRNS,
         // ├──────────┼────────┼────────┼────────┼────────┼────────┤                                   ├────────┼────────┼────────┼────────┼────────┼─────────┤
-            KC_TAB,    KC_TRNS, KC_TRNS,  KC_UP,  KC_TRNS, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+            KC_TRNS,    KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         //├──────────┼────────┼────────┼────────┼────────┼────────┤                                   ├────────┼────────┼────────┼────────┼────────┼─────────┤
-            KC_LSFT,  KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+            KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         //├─────────┼────────┼────────┼────────┼────────┼────────┼────────┐                ┌─────────┼────────┼────────┼────────┼────────┼────────┼─────────┤
-            KC_LCTL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+            KC_LCTL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_ENT,                  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┤        ┤                ├─────────┼────┬───┴────┬───┴────┬───┴────────┴────────┴─────────┘
-                                        KC_LAPO,   KC_LGUI,      KC_SPC,                    KC_ENT,       KC_TRNS, KC_TRNS
+                                        KC_LAPO,   KC_LCTL,      KC_SPC,                    KC_ENT,       KC_TRNS, KC_TRNS
         //                              └────────┴────────┘    └────────┘                └─────────┘    └────────┴────────┘
         ),
     // clang-format on
